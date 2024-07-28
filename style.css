@@ -9,11 +9,15 @@
     background-color: #000;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #ffffff96;
+    background-color: #00FF08;
 }
 body{
     background-color: black;
     height: 100vh;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth !important;
 }
 .interface{
     max-width: 1280px;
@@ -31,14 +35,14 @@ body{
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #00ffb3;
+    background-color: #00FF08;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
     transition: .2s;
 }
 button:hover, form .btn-enviar input:hover{
-    box-shadow: 0px 0px 8px #00ffb3;
+    box-shadow: 0px 0px 8px #00FF08;
     transform: scale(1.05);
 }
 h2.titulo, .parte1, .parte2{
@@ -115,6 +119,8 @@ section.topo-do-site .flex{
 .topo-do-site .img-topo-site img{
     position: relative;
     animation: flutuar 2s infinite ease-in-out alternate;
+    max-width: 350px;
+   
 }
 
 @keyframes flutuar{
@@ -159,7 +165,6 @@ section.especialidades .flex{
 section.sobre{
     padding: 80px 4%;
     padding-bottom: 110px;
-    box-shadow: 0 0 40px 10px #5eff0021;
 }
 section.sobre .flex{
     align-items: center;
@@ -174,7 +179,7 @@ section.sobre .flex{
     margin-bottom: 30px;
 }
 .sobre .txt-sobre h2 span{
-    color: #bbff00;
+    color: #00FF08;
     display: block;
 }
 .sobre .txt-sobre p{
@@ -186,7 +191,7 @@ section.sobre .flex{
     height: 60px;
     border-radius: 50%;
     border: none;
-    background-color: #bbff00;
+    background-color: #00FF08;
     font-size: 22px;
     cursor: pointer;
     margin: 0 5px;
@@ -196,14 +201,13 @@ section.sobre .flex{
 /* ESTILO DO PORTIFOLIO */
 section.portifolio{
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #fd121221;
 }
 section.portifolio .flex{
     justify-content: space-around;
     margin-top: 60px;
 }
 .parte1 span{
-    color: #ff3300;
+    color: #00FF08;
 }
 .img-port{
     width: 360px;
@@ -238,6 +242,11 @@ section.portifolio .flex{
 .overlay:hover{
     opacity: 1;
 }
+.overlay a{
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
 
 /* ESTILO DO FORMULARIO */
 section.formulario{
@@ -253,7 +262,7 @@ form{
     margin-top: 40px;
 }
 .parte2 span{
-    color: #ff00bf;
+    color: #00FF08;
 }
 form input, form textarea{
     width: 100%;
@@ -275,22 +284,21 @@ form .btn-enviar{
 }
 form .btn-enviar input{
     width: 120px;
-    background-color: #ff00bf;
-    color: #000;
+    background-color: #00ff08d8;
+    color: #000000;
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
 }
 form  input::placeholder{
-    color: #ff6cda;
+    color: #00FF08;
 }
 form  textarea::placeholder{
-    color: #ff6cda;
+    color: #00FF08;
 }
 /* ESTILO DO RODAPÉ */
 footer{
     padding: 40px 4%;
-    box-shadow: 0 0 40px 10px #0004ff21;
 }
 footer .flex{
     justify-content: space-between;
@@ -299,10 +307,10 @@ footer .line-footer{
     padding: 20px 0;
 }
 .borda{
-    border-top: 2px solid #1a1efaad;
+    border-top: 2px solid #00FF08;
 }
 footer .line-footer p i{
-    color: #1a1efaad;
+    color: #00FF08;
     font-size: 22px;
     margin-right: 10px;
 }
@@ -315,7 +323,7 @@ footer .line-footer p a{
     height: 60px;
     border-radius: 50%;
     border: none;
-    background-color: #1a1efaad;
+    background-color: #00FF08;
     font-size: 22px;
     cursor: pointer;
     margin: 0 5px;
@@ -326,7 +334,7 @@ footer .line-footer p a{
 .box-degrade{
     width: 100%;
     padding: 30px 0;
-    background-image: linear-gradient(to left,#1a1efaad,#ff00bf,#ff3300,#bbff00,#00FF08,#33f1b8,#00ffb3,#33f1b8, #00FF08, #bbff00, #ff3300, #ff00bf, #1a1efaad);
+    background-image: linear-gradient(to left,#00FF08,#33f1b8,#00ffb3,#33f1b8, #00FF08);
     background-size: 500% 100%;
     animation: degrade-animado 8s infinite alternate ease-in-out;
     border-radius: 20px;
@@ -406,20 +414,8 @@ footer .line-footer p a{
 .menu-mobile nav ul li a:hover{
     color: #000;
 }
-.menu-mobile nav ul li a.ciano:hover{
-    background-color: #00ffb3;
-}
 .menu-mobile nav ul li a.verde:hover{
     background-color: #00FF08;
-}
-.menu-mobile nav ul li a.amarelo:hover{
-    background-color: #bbff00;
-}
-.menu-mobile nav ul li a.vermelho:hover{
-    background-color: #ff3300;
-}
-.menu-mobile nav ul li a.rosa:hover{
-    background-color: #ff6cda;
 }
 .overlay-menu{
     background-color: #000000d3;
@@ -439,13 +435,19 @@ footer .line-footer p a{
         padding: 20px 8%;
     }
     .topo-do-site h1{
-        font-size: 30px;
+        font-size: 25px;
     }
     .topo-do-site .img-topo-site img{
         width: 100%;
+        max-width: 300px;
+        
     }
     .img-topo-site{
-        width:  430px;
+        text-align: center;
+    }
+    .txt-topo-site{
+        text-align: center;
+        margin-inline: 1rem;
     }
 
     /* ESPECIALIDADES */
@@ -453,27 +455,44 @@ footer .line-footer p a{
         padding: 40px 8%;
     }
     h2.titulo{
-        font-size: 34px;
+        font-size: 32px;
         line-height: 30px;
     }   
+    .especialidades .especialidades-box{
+        padding: 15px;
+        font-size: 18px;
+        margin-inline: 0.75rem;
+    }
+    .especialidades .especialidades-box i{
+        font-size: 60px;
+    }
     /* SOBRE */
     section.sobre{
         padding: 80px 8%;
     }
+    .img-sobre img{
+        width: 100%;
+        max-width: 280px;
+    }
     .sobre .txt-sobre h2{
-        font-size: 34px;
+        font-size: 32px;
         line-height: 35px;
         text-align: center;
     }
+    .sobre .txt-sobre p{
+        margin-inline: 1.25rem;
+    }
     .btn-social{
         text-align: center;
+        margin-top: 3rem;
     }
-    .img-sobre img{
-        width: 100%;
-    }
+    
     /* PORTIFOLIO */
     section.portifolio{
         padding: 80px 8%;
+    }
+    .portifolio h2{
+        font-size: 32px;
     }
     .img-port{
         width: 100%;
@@ -485,8 +504,8 @@ footer .line-footer p a{
     }
     /* RODAPÉ */
     footer .flex{
-        flex-direction: column;
-        gap: 300px;
+        flex-direction: row;
+        gap: 10px;
     }
     footer .line-footer{
         text-align: center;
