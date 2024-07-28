@@ -472,7 +472,8 @@ footer .line-footer p a{
     }
     .img-sobre img{
         width: 100%;
-        max-width: 280px;
+        max-width: 285px;
+        height: 350px !important;
     }
     .sobre .txt-sobre h2{
         font-size: 32px;
