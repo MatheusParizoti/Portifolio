@@ -45,7 +45,7 @@ revelar.reveal('.efeito-meu-txt',{
     duration:2000,
     distance: '90px',
     delay:1000,
-    origin: 'right'
+    origin: 'left'
 })
 // SESSAO ESCADA
 revelar.reveal('.efeito-escada1',{
